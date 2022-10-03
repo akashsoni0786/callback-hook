@@ -1,7 +1,8 @@
-import React, { useCallback, useState } from "react";
+import React, { memo, useCallback, useState } from "react";
 import { TextField } from "@shopify/polaris";
 
 const Compo3 = (props) => {
+  console.log("compo 3")
   const [value, setValue] = useState("");
   const handleChange = useCallback((newValue) => {
     setValue(newValue);
@@ -25,4 +26,4 @@ const Compo3 = (props) => {
   );
 };
 
-export default Compo3;
+export default memo(Compo3);

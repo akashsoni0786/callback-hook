@@ -1,8 +1,9 @@
-import React, { useCallback, useState } from "react";
+import React, { memo, useCallback, useState } from "react";
 import { TextField } from "@shopify/polaris";
 import "@shopify/polaris/build/esm/styles.css";
 import Compo2 from "./Compo2";
 const Compo1 = (props) => {
+  console.log("compo 1")
 
   const [value, setValue] = useState("");
 
@@ -28,4 +29,4 @@ const Compo1 = (props) => {
   );
 };
 
-export default Compo1;
+export default memo(Compo1);
